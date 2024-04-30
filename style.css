@@ -119,15 +119,16 @@ body * {
             
 
             transform: translateY(-50%);
+            animation: slide-back 0.8s ;
 
         }
         
         .light #switch button {
             
+            animation: slide-in 0.8s forwards;
 
 
-            right: 0;
-            left: initial;
+            
 
         }
 
@@ -143,6 +144,10 @@ body * {
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
             border-radius: 9999px;
+
+        }
+        #switch button:hover {
+            outline: 8px solid var(--highlight-color);
 
         }
 
@@ -235,4 +240,25 @@ footer{
 .light{
     --bg-ur: url(.assets/bg-desktop-light.jpg);
 }
+}
+
+/*animação*/
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
 }

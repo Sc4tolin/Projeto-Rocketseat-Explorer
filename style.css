@@ -55,6 +55,7 @@ body * {
 #container {
    /* border: 1px solid red ;*/
     width: 360px;
+    max-width: 588px;
     margin: auto;
     margin-top: 56px;
     padding: 0 24px;
